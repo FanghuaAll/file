@@ -1,0 +1,85 @@
+{
+  "baseImageURL": "https://gitee.com/FanghuaAll/file/raw/master/image/",
+  "products": [
+  {
+    "image": "BBR格纹口袋短袖.jpg",
+    "sizes": ["XS", "S", "M", "L"]
+  },
+  {
+    "image": "BV POLO短袖.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "image": "BV口袋短袖.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "image": "JIL短袖绿.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "image": "LV彩虹字母短袖.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "image": "LV花朵针织短袖.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "image": "LV小飞机短袖.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "image": "LV鸭子短袖.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "image": "LV音乐会人像短袖.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "image": "LV珍珠扣针织POLO衫.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "image": "巴黎WiFi爱心短袖黑.jpg",
+    "sizes": ["XS", "S", "M"]
+  },
+  {
+    "image": "巴黎WiFi爱心短袖.jpg",
+    "sizes": ["XS", "S", "M"]
+  },
+  {
+    "image": "迪奥1947植绒印花短袖.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "image": "迪奥小恐龙短袖.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "image": "迪奥植绒针织短袖.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "image": "芬迪侧边黄条纹短裤.jpg",
+    "sizes": ["XS", "S", "M", "L"]
+  },
+  {
+    "image": "古驰模糊双G短袖.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "image": "纪梵希闪电短袖.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "image": "赛琳PARIS裂纹短袖.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "image": "赛琳烫钻短袖.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  }
+]
+}
