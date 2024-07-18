@@ -2,6 +2,10 @@
   "baseImageURL": "https://gitee.com/FanghuaAll/file/raw/master/image/",
   "products": [
   {
+    "image": "罗意威条纹皮牌衬衫.jpg",
+    "sizes": ["35", "37", "39", "41"]
+  },
+  {
     "image": "罗意威毛巾绣短袖.jpg",
     "sizes": ["S", "M", "L", "XL"]
   },
