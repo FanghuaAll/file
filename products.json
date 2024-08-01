@@ -1,11 +1,19 @@
 {
   "baseImageURL": "https://gitee.com/FanghuaAll/file/raw/master/image/",
   "products": [
-    {
+  {
+    "image": "LP亚麻短袖.jpg",
+    "sizes": ["48", "50", "52"]
+  },
+  {
+    "image": "芬迪徽章短袖.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
     "image": "迪奥铃兰花短袖.jpg",
     "sizes": ["S", "M", "L"]
   },
-    {
+  {
     "image": "BBR鸭子短袖.jpg",
     "sizes": ["XS", "S", "M", "L"]
   },
@@ -13,7 +21,7 @@
     "image": "MIUMIU爱心短袖.jpg",
     "sizes": ["XS", "S", "M", "L"]
   },
-    {
+  {
     "image": "巴黎铁塔短袖.jpg",
     "sizes": ["1", "2", "3"]
   },
