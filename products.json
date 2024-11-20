@@ -2,46 +2,57 @@
   "baseImageURL": "https://gitee.com/FanghuaAll/file/raw/master/image/",
   "products": [
   {
+    "category": "短袖",
     "image": "巴黎IB反光短袖.jpg",
     "sizes": ["XS", "S", "M"]
   },
   {
+    "category": "短裤",
     "image": "巴黎IB反光短裤.jpg",
     "sizes": ["XS", "S", "M", "L"]
   },
   {
+    "category": "短裤",
     "image": "LV牛仔工装短裤.jpg",
     "sizes": ["44", "46", "48", "50"]
   },
   {
+    "category": "POLO",
     "image": "普拉达假两件POLO.jpg",
     "sizes": ["S", "M", "L", "XL"]
   },
   {
+    "category": "短袖",
     "image": "LP亚麻短袖.jpg",
     "sizes": ["48", "50", "52"]
   },
   {
+    "category": "短袖",
     "image": "芬迪徽章短袖.jpg",
     "sizes": ["S", "M", "L"]
   },
   {
+    "category": "短袖",
     "image": "迪奥铃兰花短袖.jpg",
     "sizes": ["S", "M", "L"]
   },
   {
+    "category": "短袖",
     "image": "BBR鸭子短袖.jpg",
     "sizes": ["XS", "S", "M", "L"]
   },
    {
+     "category": "短袖",
     "image": "MIUMIU爱心短袖.jpg",
     "sizes": ["XS", "S", "M", "L"]
   },
   {
+    "category": "短袖",
     "image": "巴黎铁塔短袖.jpg",
     "sizes": ["1", "2", "3"]
   },
    {
+    "category": "POLO",
     "image": "古驰双G章仔POLO衫.jpg",
     "sizes": ["XS", "S", "M", "L"]
   },
