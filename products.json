@@ -2,6 +2,21 @@
   "baseImageURL": "https://gitee.com/FanghuaAll/file/raw/master/image/",
   "products": [
   {
+    "category": "衬衫",
+    "image": "BBR战马刺绣格纹衬衫.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "category": "外套",
+    "image": "NIKE&FOG联名外套.jpg",
+    "sizes": ["XS", "S", "M", "L"]
+  },
+  {
+    "category": "帽衫",
+    "image": "巴黎多LOGO帽衫白.jpg",
+    "sizes": ["1", "2", "3"]
+  },
+  {
     "category": "短袖",
     "image": "巴黎IB反光短袖.jpg",
     "sizes": ["XS", "S", "M"]
