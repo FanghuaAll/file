@@ -2,6 +2,101 @@
   "baseImageURL": "https://gitee.com/FanghuaAll/file/raw/master/image/",
   "products": [
   {
+    "category": "帽衫",
+    "image": "亚历山大王麻将帽衫.jpg",
+    "sizes": ["XS", "S", "M"]
+  },
+  {
+    "category": "毛衣",
+    "image": "熊猫毛衣.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "帽衫",
+    "image": "赛琳植绒帽衫象牙白.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "外套",
+    "image": "赛琳C字外套.jpg",
+    "sizes": ["48", "50", "52"]
+  },
+  {
+    "category": "长袖",
+    "image": "罗意威小刺绣长袖白.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "长袖",
+    "image": "罗意威小刺绣长袖黑.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "衬衫",
+    "image": "罗意威条纹皮牌衬衫.jpg",
+    "sizes": ["35", "37", "39", "41"]
+  },
+  {
+    "category": "短裤",
+    "image": "杰尼亚亚麻短裤.jpg",
+    "sizes": ["48", "50", "52", "54"]
+  },
+  {
+    "category": "帽衫",
+    "image": "巴黎三叶草帽衫绿.jpg",
+    "sizes": ["1", "2", "3"]
+  },
+  {
+    "category": "外套",
+    "image": "巴黎拼色夹克.jpg",
+    "sizes": ["XS", "S", "M"]
+  },
+  {
+    "category": "外套",
+    "image": "巴黎拼接风衣.jpg",
+    "sizes": ["S", "M"]
+  },
+  {
+    "category": "外套",
+    "image": "巴黎黑白拼条外套.jpg",
+    "sizes": ["XS", "S", "M"]
+  },
+  {
+    "category": "帽衫",
+    "image": "巴黎穿绳帽衫蓝.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "长袖",
+    "image": "MIU条纹长袖POLO.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "category": "长袖",
+    "image": "LV袖口满印针织长袖.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "category": "帽衫",
+    "image": "FOG植绒帽衫黑.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "外套",
+    "image": "BBR蓝色战马贴布夹克.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "category": "帽衫",
+    "image": "芬迪徽章短袖.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "衬衫",
+    "image": "BBR蓝白格纹衬衫.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
     "category": "衬衫",
     "image": "BBR战马刺绣格纹衬衫.jpg",
     "sizes": ["S", "M", "L", "XL"]
