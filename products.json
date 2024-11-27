@@ -2,6 +2,31 @@
   "baseImageURL": "https://gitee.com/FanghuaAll/file/raw/master/image/",
   "products": [
   {
+    "category": "长裤",
+    "image": "普拉达尼龙长裤.jpg",
+    "sizes": ["46", "48", "50", "52"]
+  },
+  {
+    "category": "毛衣",
+    "image": "赛琳半拉链毛衣黑.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "毛衣",
+    "image": "赛琳半拉链毛衣灰.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "毛衣",
+    "image": "YSL马海毛字母提花毛衣.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "外套",
+    "image": "LV蓝白条纹针织外套.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
     "category": "帽衫",
     "image": "亚历山大王麻将帽衫.jpg",
     "sizes": ["XS", "S", "M"]
