@@ -3,6 +3,46 @@
   "products": [
   {
     "category": "帽衫",
+    "image": "马吉拉数字破洞帽衫.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "长袖",
+    "image": "巴黎乐谱圆领卫衣.jpg",
+    "sizes": ["1", "2", "3"]
+  },
+  {
+    "category": "长裤",
+    "image": "巴黎IB反光长裤.jpg",
+    "sizes": ["XS", "S", "M"]
+  },
+  {
+    "category": "帽衫",
+    "image": "巴黎IB反光帽衫.jpg",
+    "sizes": ["1", "2", "3"]
+  },
+  {
+    "category": "外套",
+    "image": "MIU藏青夹克.jpg",
+    "sizes": ["38", "40", "42", "44"]
+  },
+  {
+    "category": "长裤",
+    "image": "LV小刺绣长裤灰.jpg",
+    "sizes": ["40", "42", "44", "46"]
+  },
+  {
+    "category": "衬衫",
+    "image": "BV羊毛夹克衬衫.jpg",
+    "sizes": ["46", "48", "50", "52"]
+  },
+  {
+    "category": "帽衫",
+    "image": "BBR彩虹字体帽衫.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "帽衫",
     "image": "普拉达金标帽衫.jpg",
     "sizes": ["S", "M", "L"]
   },
