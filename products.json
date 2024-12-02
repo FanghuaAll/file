@@ -2,6 +2,11 @@
   "baseImageURL": "https://gitee.com/FanghuaAll/file/raw/master/image/",
   "products": [
   {
+    "category": "长袖",
+    "image": "迪奥石头岛圆领.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
     "category": "外套",
     "image": "马吉拉西装外套.jpg",
     "sizes": ["46", "48", "50"]
@@ -217,7 +222,7 @@
     "sizes": ["44", "46", "48", "50"]
   },
   {
-    "category": "POLO",
+    "category": "短袖",
     "image": "普拉达假两件POLO.jpg",
     "sizes": ["S", "M", "L", "XL"]
   },
@@ -252,7 +257,7 @@
     "sizes": ["1", "2", "3"]
   },
    {
-    "category": "POLO",
+    "category": "短袖",
     "image": "古驰双G章仔POLO衫.jpg",
     "sizes": ["XS", "S", "M", "L"]
   },
@@ -342,7 +347,7 @@
     "sizes": ["S", "M", "L"]
   },
   {
-    "category": "POLO",
+    "category": "短袖",
     "image": "LV珍珠扣针织POLO衫.jpg",
     "sizes": ["S", "M", "L", "XL"]
   },
@@ -517,7 +522,7 @@
     "sizes": ["XS", "S", "M"]
   },
   {
-    "category": "POLO",
+    "category": "短袖",
     "image": "芬迪POLO.jpg",
     "sizes": ["XS", "S", "M", "L"]
   },
@@ -577,7 +582,7 @@
     "sizes": ["S", "M", "L"]
   },
   {
-    "category": "POLO",
+    "category": "短袖",
     "image": "赛琳凯旋门刺绣POLO短袖.jpg",
     "sizes": ["S", "M", "L", "XL"]
   },
