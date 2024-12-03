@@ -2,6 +2,21 @@
   "baseImageURL": "https://gitee.com/FanghuaAll/file/raw/master/image/",
   "products": [
   {
+    "category": "衬衫",
+    "image": "马吉拉彩虹格子衬衣.jpg",
+    "sizes": ["38", "40", "42", "44"]
+  },
+  {
+    "category": "帽衫",
+    "image": "巴黎自由女神帽衫.jpg",
+    "sizes": ["1", "2", "3"]
+  },
+  {
+    "category": "毛衣",
+    "image": "BV绿白线交错毛衣.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
     "category": "长袖",
     "image": "迪奥石头岛圆领.jpg",
     "sizes": ["S", "M", "L"]
@@ -280,6 +295,11 @@
     "category": "短裤",
     "image": "爱马仕短裤.jpg",
     "sizes": ["42", "44", "46", "48"]
+  },
+  {
+    "category": "短袖",
+    "image": "巴黎贝弗利山刺绣短袖.jpg",
+    "sizes": ["XS", "S", "M"]
   },
   {
     "category": "短袖",
