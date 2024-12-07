@@ -2,6 +2,21 @@
   "baseImageURL": "https://gitee.com/FanghuaAll/file/raw/master/image/",
   "products": [
   {
+    "category": "长袖",
+    "image": "BBR战马贴布圆领.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "毛衣",
+    "image": "BV高领小刺绣毛衣花灰色.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "毛衣",
+    "image": "BV高领小刺绣毛衣黑.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
     "category": "衬衫",
     "image": "马吉拉彩虹格子衬衣.jpg",
     "sizes": ["38", "40", "42", "44"]
@@ -34,7 +49,7 @@
   {
     "category": "毛衣",
     "image": "LV宝石扣毛衣.jpg",
-    "sizes": ["S", "M", "L"]
+    "sizes": ["S", "M", "L", "XL"]
   },
   {
     "category": "长袖",
