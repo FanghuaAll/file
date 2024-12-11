@@ -2,6 +2,11 @@
   "baseImageURL": "https://gitee.com/FanghuaAll/file/raw/master/image/",
   "products": [
   {
+    "category": "帽衫",
+    "image": "赛琳小标连帽外套.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
     "category": "毛衣",
     "image": "BBR格纹毛衣灰.jpg",
     "sizes": ["S", "M", "L"]
