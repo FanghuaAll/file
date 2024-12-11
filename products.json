@@ -2,6 +2,16 @@
   "baseImageURL": "https://gitee.com/FanghuaAll/file/raw/master/image/",
   "products": [
   {
+    "category": "毛衣",
+    "image": "BBR格纹毛衣灰.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "长袖",
+    "image": "MIU蓝色长袖POLO衫.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
     "category": "长袖",
     "image": "BBR战马贴布圆领.jpg",
     "sizes": ["S", "M", "L"]
