@@ -47,7 +47,7 @@
     "sizes": ["S", "M", "L"]
   },
   {
-    "category": "衬衫",
+    "category": "长袖",
     "image": "马吉拉彩虹格子衬衣.jpg",
     "sizes": ["38", "40", "42", "44"]
   },
@@ -122,7 +122,7 @@
     "sizes": ["40", "42", "44", "46"]
   },
   {
-    "category": "衬衫",
+    "category": "长袖",
     "image": "BV羊毛夹克衬衫.jpg",
     "sizes": ["46", "48", "50", "52"]
   },
@@ -247,12 +247,12 @@
     "sizes": ["S", "M", "L"]
   },
   {
-    "category": "衬衫",
+    "category": "长袖",
     "image": "BBR蓝白格纹衬衫.jpg",
     "sizes": ["S", "M", "L", "XL"]
   },
   {
-    "category": "衬衫",
+    "category": "长袖",
     "image": "BBR战马刺绣格纹衬衫.jpg",
     "sizes": ["S", "M", "L", "XL"]
   },
