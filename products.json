@@ -112,6 +112,16 @@
     "sizes": ["S", "M", "L"]
   },
   {
+    "category": "帽衫",
+    "image": "马吉拉数字帽衫白.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "帽衫",
+    "image": "马吉拉数字帽衫黑.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
     "category": "长袖",
     "image": "巴黎乐谱圆领卫衣.jpg",
     "sizes": ["1", "2", "3"]
