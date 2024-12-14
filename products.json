@@ -2,6 +2,21 @@
   "baseImageURL": "https://gitee.com/FanghuaAll/file/raw/master/image/",
   "products": [
   {
+    "category": "毛衣",
+    "image": "迪奥马海毛毛衣.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "外套",
+    "image": "赛琳织带外套.jpg",
+    "sizes": ["XS", "S", "M", "L"]
+  },
+  {
+    "category": "长裤",
+    "image": "赛琳织带长裤.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
     "category": "长袖",
     "image": "MIU MIU POLO圆领.jpg",
     "sizes": ["S", "M", "L"]
@@ -349,6 +364,11 @@
   {
     "category": "短袖",
     "image": "巴黎涂鸦短袖.jpg",
+    "sizes": ["XS", "S", "M"]
+  },
+  {
+    "category": "短袖",
+    "image": "巴黎领口刺绣短袖.jpg",
     "sizes": ["XS", "S", "M"]
   },
   {
