@@ -8,6 +8,11 @@
   },
   {
     "category": "外套",
+    "image": "普拉达棉服.jpg",
+    "sizes": ["36", "38", "40"]
+  },
+  {
+    "category": "外套",
     "image": "赛琳织带外套.jpg",
     "sizes": ["XS", "S", "M", "L"]
   },
