@@ -2,6 +2,11 @@
   "baseImageURL": "https://gitee.com/FanghuaAll/file/raw/master/image/",
   "products": [
   {
+    "category": "帽衫",
+    "image": "巴黎铁塔帽衫.jpg",
+    "sizes": ["1", "2", "3"]
+  },
+  {
     "category": "毛衣",
     "image": "迪奥马海毛毛衣.jpg",
     "sizes": ["S", "M", "L"]
