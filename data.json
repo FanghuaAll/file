@@ -2,6 +2,16 @@
   "baseImageURL": "https://gh.llkk.cc/https://raw.githubusercontent.com/FanghuaAll/file/main/img/",
   "products": [
   {
+    "category": "帽衫",
+    "image": "BBR格子帽帽衫.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "外套",
+    "image": "LV小花外套.jpg",
+    "sizes": ["44", "46", "48", "50"]
+  },
+  {
     "category": "外套",
     "image": "LV棋盘格水洗牛仔外套.jpg",
     "sizes": ["46", "48", "50", "52"]
