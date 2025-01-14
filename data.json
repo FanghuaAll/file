@@ -2,6 +2,11 @@
   "baseImageURL": "https://gh.llkk.cc/https://raw.githubusercontent.com/FanghuaAll/file/main/img/",
   "products": [
   {
+    "category": "毛衣",
+    "image": "  {迪奥小字母毛衣.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
     "category": "帽衫",
     "image": "BBR格子帽帽衫.jpg",
     "sizes": ["S", "M", "L"]
