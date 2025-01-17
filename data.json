@@ -3,6 +3,16 @@
   "products": [
   {
     "category": "外套",
+    "image": "罗意威昂跑冲锋衣.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "category": "外套",
+    "image": "石头岛软壳夹克.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "category": "外套",
     "image": "LV羊羔绒咖色.jpg",
     "sizes": ["S", "M", "L", "XL"]
   },
