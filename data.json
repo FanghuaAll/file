@@ -2,7 +2,17 @@
   "baseImageURL": "https://gh.llkk.cc/https://raw.githubusercontent.com/FanghuaAll/file/main/img/",
   "products": [
   {
-    "category": "帽衫",
+    "category": "外套",
+    "image": "LV羊羔绒咖色.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "category": "毛衣",
+    "image": "LV大字母LOGO毛衣.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "毛衣",
     "image": "迪奥小字母毛衣.jpg",
     "sizes": ["S", "M", "L"]
   },
