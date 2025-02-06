@@ -2,6 +2,11 @@
   "baseImageURL": "https://gh.llkk.cc/https://raw.githubusercontent.com/FanghuaAll/file/main/img/",
   "products": [
   {
+    "category": "帽衫",
+    "image": "骷髅头帽衫.jpg",
+    "sizes": ["S", "M"]
+  },
+  {
     "category": "外套",
     "image": "罗意威昂跑冲锋衣.jpg",
     "sizes": ["S", "M", "L", "XL"]
