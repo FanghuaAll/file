@@ -3,6 +3,11 @@
   "products": [
   {
     "category": "帽衫",
+    "image": "罗意威背后LOGO毛衣外套.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "帽衫",
     "image": "骷髅头帽衫.jpg",
     "sizes": ["S", "M"]
   },
