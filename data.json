@@ -2,6 +2,16 @@
   "baseImageURL": "https://raw.kkgithub.com/FanghuaAll/file/refs/heads/main/img/",
   "products": [
   {
+    "category": "外套",
+    "image": "石头岛棉服.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "category": "长袖",
+    "image": "迪岛联名侧边半拉链卫衣.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
     "category": "帽衫",
     "image": "罗意威背后LOGO毛衣外套.jpg",
     "sizes": ["S", "M", "L"]
