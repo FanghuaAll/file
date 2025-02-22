@@ -2,6 +2,11 @@
   "baseImageURL": "https://raw.kkgithub.com/FanghuaAll/file/refs/heads/main/img/",
   "products": [
   {
+    "category": "长裤",
+    "image": "LV侧边X字渐变长裤.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
     "category": "帽衫",
     "image": "LV绿松石吊坠帽衫.jpg",
     "sizes": ["S", "M", "L", "XL"]
