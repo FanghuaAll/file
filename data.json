@@ -2,6 +2,16 @@
   "baseImageURL": "https://raw.kkgithub.com/FanghuaAll/file/refs/heads/main/img/",
   "products": [
   {
+    "category": "外套",
+    "image": "LV千鸟格休闲西装外套.jpg",
+    "sizes": ["46", "48", "50", "52"]
+  },
+  {
+    "category": "长裤",
+    "image": "LV休闲羊毛裤 灰色.jpg",
+    "sizes": ["46", "48", "50", "52"]
+  },
+  {
     "category": "长裤",
     "image": "LV侧边X字渐变长裤.jpg",
     "sizes": ["S", "M", "L", "XL"]
