@@ -3,6 +3,11 @@
   "products": [
   {
     "category": "外套",
+    "image": "黄胶条风衣.jpg",
+    "sizes": ["XS", "S", "M"]
+  },
+  {
+    "category": "外套",
     "image": "LV千鸟格休闲西装外套.jpg",
     "sizes": ["46", "48", "50", "52"]
   },
