@@ -3,6 +3,26 @@
   "products": [
   {
     "category": "外套",
+    "image": "TB休闲西装外套.jpg",
+    "sizes": ["1", "2", "3", "4"]
+  },
+  {
+    "category": "长袖",
+    "image": "miumiu假两件polo长袖咖色.jpg",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "category": "长袖",
+    "image": "芬迪前后刺绣圆领.jpg",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "category": "帽衫",
+    "image": "巴黎夏威夷帽衫.jpg",
+    "sizes": ["1", "2", "3"]
+  },
+  {
+    "category": "外套",
     "image": "黄胶条风衣.jpg",
     "sizes": ["XS", "S", "M"]
   },
