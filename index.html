@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="max-age=86400" />
+<title>柯南报货</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f3f5fc;}
+  header {
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed; /* 固定在顶部 */
+  top: 0px; /* 顶部位置 */
+  left: 0; /* 左侧位置 */
+  right: 0; /* 右侧位置 */
+  z-index: 1000; /* 确保标题在页面其他元素之上 */
+  }
+  h1 { margin: 0; }
+  .product-grid { padding-bottom: 100px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 20px auto; max-width: 1400px; }
+  .product { text-align: center; padding: 10px; border: 1px solid #ddd; border-radius: 5px;  background: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+  backdrop-filter: blur(10px); /* 背景模糊效果 */
+  -webkit-backdrop-filter: blur(10px); /* 兼容webkit浏览器 */ }
+  .product img { width: 200px; height: 200px; object-fit: contain;}/* 产品图片大小 */
+  .product-info { text-align: center; }
+  .product-name { font-size: 16px; font-weight: bold; margin-top: 5px; margin-bottom: 15px; }
+  .size-buttons { display: flex; justify-content: center; margin-top: 5px; }
+  .size-buttons button { margin: 0 5px; padding: 10px 20px; background: #f0f0f0; border: none; border-radius: 5px; cursor: pointer; margin-bottom: 10px; }
+  .size-buttons button:hover { background: #99deff; }
+  .cart { position: fixed; bottom: 0; left: 0; right: 0; background: #f9f9f9; padding: 10px; box-shadow: 0 -2px 5px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; }
+  .cart-item { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 5px; border-bottom: 1px solid #ddd; }
+  .cart-item .item-info { flex-grow: 1; text-align: left; }
+  .cart-item button { margin-left: 10px; padding: 5px 10px; background: #ff6b81; border: none; color: white; border-radius: 5px; }
+  .cart-item button:hover { background: #ff4d6a; }
+  .copy-btn { margin: 10px 0; padding: 10px 25px; background: #4caf50; border: none; color: white; border-radius: 5px; cursor: pointer; }
+  .copy-btn:hover { background: #45a049; }
+  .clear-cart-btn { margin: 10px 0; padding: 10px 25px; background: #f6d020; border: none; color: white; border-radius: 5px; cursor: pointer; }
+  .clear-cart-btn:hover { background: #e3bb00; }
+  .export-img-btn {
+  margin: 10px 0;
+  padding: 10px 25px;
+  background: #82589F;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.export-img-btn:hover {
+  background: #6C4F7C;
+}
+  #messageBox {
+    position: fixed;
+   top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden; /* 初始设为隐藏 */
+    transition: opacity 0.5s, visibility 0.5s; /* 过渡效果 */
+    z-index: 1000;
+  }
+  #messageBox.show {
+    opacity: 1;
+    visibility: visible; /* 显示时设置为可见 */
+  }
+.cart {
+  position: fixed; /* 固定定位 */
+  bottom: 20px; /* 距离底部10px */
+  right: 20px; /* 距离右侧10px */
+left:auto; 
+  width: 360px; /* 设置购物车宽度，根据需要调整 */
+    background: rgba(255, 255, 255, 0.3); /* 半透明的背景 */
+    backdrop-filter: blur(20px); /* 背景模糊效果 */
+    padding: 10px;
+  border-radius: 15px; /* 设置圆角 */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+.cart-item-image {
+  width: 40px; /* 减小图片宽度 */
+  height: 40px; /* 减小图片高度 */
+  margin-right: 5px; /* 根据需要调整图片与商品信息之间的间距 */
+  vertical-align: middle; /* 垂直居中对齐 */
+  border-radius: 5px; /* 根据需要调整图片圆角 */
+  object-fit: cover; /* 保持图片比例填充 */
+}
+.search-box {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.3); /* 半透明背景 */
+  backdrop-filter: blur(10px); /* 背景模糊效果 */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 300px;
+  z-index: 100;
+}
+
+/* 定义选中的CSS类 */
+.selected {
+    background: #99deff; /* 绿色背景 */
+    color: white; /* 白色文字 */
+}
+
+.filter-buttons {
+  position: fixed;
+  bottom: 115px; /* 根据需要调整位置 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3); /* 半透明背景 */
+  backdrop-filter: blur(10px); /* 背景模糊效果 */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.filter-btn {
+  margin: 0 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filter-btn:hover {
+  background: #99deff;
+}
+
+  .search-box, .filter-buttons {
+    transition: opacity 0.5s ease-in-out;
+	will-change: opacity; /* 提高性能 */
+	pointer-events: auto; /* 允许交互 */
+  }
+
+  .search-box {
+    bottom: 50px; /* 根据需要调整 */
+  }
+
+  .filter-buttons {
+    bottom: 115px; /* 根据需要调整 */
+  }
+
+#searchInput {
+  color: #eee;
+  flex-grow: 1;
+  margin-right: 10px; /* 增加与搜索按钮之间的间距 */
+  padding: 10px 15px; /* 增加内边距 */
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.1); /* 半透明背景 */
+
+  outline: none; /* 点击时不显示轮廓 */
+}
+#searchInput::placeholder {
+  color: #ccc; /* 灰色，可根据需要更改 */
+  opacity: 1; /* 确保在iOS上占位符文本可见 */
+}
+
+#clearButton {
+  font-size: 20px; /* 根据需要调整字体大小 */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999; /* 按钮颜色 */
+}
+
+#clearButton:hover {
+  color: #eee; /* 鼠标悬停时的颜色 */
+}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>柯南报货</h1>
+</header>
+<div style="height: 80px;"></div>
+
+<div class="filter-buttons">
+  <button class="filter-btn" data-filter="all">全部</button>
+</div>
+
+<div class="product-grid" id="productGrid"></div>
+
+<div id="searchBox" class="search-box">
+  <input type="text" id="searchInput" placeholder="搜索..." oninput="searchProducts()">
+  <button id="clearButton" title="清除" onclick="clearSearch()">&#x274C;</button> <!-- 使用叉号图标作为清除按钮 -->
+</div>
+
+<div class="cart">
+  <div id="cartItems"></div>
+  <!-- 初始时不显示清空和复制按钮 -->
+  <div class="cart-header" style="display: none;">
+    <button class="clear-cart-btn" onclick="clearCart()">清空</button>
+    <button class="copy-btn" onclick="copyCart()">复制内容</button>
+	<button class="export-img-btn" onclick="exportCartAsImage()">导出图片</button>
+  </div>
+</div>
+
+<div id="messageBox"></div>
+
+<script>
+// 假设extractProductNameFromUrl函数已经根据图片名称提取商品名称
+function extractProductNameFromUrl(image) {
+  const name = image.split('.jpg')[0]; // 假设图片名称后缀总是.jpg
+  // 去除文件名中的后缀
+  // const name = image.replace(/\.[^/.]+?$/, "");
+  return name;
+}
+
+// 获取底部元素
+const searchBox = document.getElementById('searchBox');
+const filterButtons = document.querySelector('.filter-buttons');
+
+// 监听页面滚动事件
+window.addEventListener('scroll', function() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.offsetHeight;
+
+  // 判断是否有滚动条
+  const hasScrollbar = documentHeight > windowHeight;
+
+  // 计算页面底部与视口底部的距离
+  const distanceToBottom = documentHeight - scrollTop - windowHeight;
+
+  // 当有滚动条且距离底部小于一定值时开始渐隐
+  if (hasScrollbar && distanceToBottom < 50) { // 调整这个值以适应您的设计
+    // 渐隐
+    searchBox.style.opacity = '0';
+    filterButtons.style.opacity = '0';
+  } else {
+    // 渐显
+    searchBox.style.opacity = '1';
+    filterButtons.style.opacity = '1';
+  }
+});
+
+// 添加 CSS 过渡效果
+searchBox.classList.add('search-box');
+filterButtons.classList.add('filter-buttons');
+
+// 购物车项对象结构
+function CartItem(productName, size, productImageUrl) {
+  this.productName = productName;
+  this.size = size;
+  this.productImageUrl = productImageUrl;
+}
+
+// 将购物车数据保存到LocalStorage
+function saveCartToLocalStorage() {
+  const cartItems = document.querySelectorAll('.cart-item');
+  let cartData = [];
+  cartItems.forEach(item => {
+    const itemInfo = item.querySelector('.item-info').textContent.split(' - ');
+    const productName = itemInfo[0];
+    const size = itemInfo[1];
+    const productImageUrl = item.querySelector('.cart-item-image').src;
+    cartData.push(new CartItem(productName, size, productImageUrl));
+  });
+  localStorage.setItem('cart', JSON.stringify(cartData));
+}
+
+// 从LocalStorage加载购物车数据
+function loadCartFromLocalStorage() {
+  const cartData = JSON.parse(localStorage.getItem('cart'));
+  if (cartData) {
+    cartData.forEach(item => {
+      addToCart(item.productName, item.size, item.productImageUrl);
+    });
+  }
+}
+
+// 清空LocalStorage中的购物车数据
+function clearCartFromLocalStorage() {
+  localStorage.removeItem('cart');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  loadCartFromLocalStorage();
+  fetch('https://gh.llkk.cc/https://raw.githubusercontent.com/FanghuaAll/file/main/data.json') // 替换为实际的JSON数据URL
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      renderProducts(data.products, data.baseImageURL);
+	  createFilterButtons(data.products); // 创建分类按钮
+    })
+    .catch(error => {
+      console.error('There has been a problem with your fetch operation:', error);
+    });
+toggleCartButtons(); // 页面加载时检查购物车状态并设置按钮显示
+hideCart();
+  const searchInput = document.getElementById('searchInput');
+  searchInput.addEventListener('input', searchProducts); // 监听输入事件
+  const allButton = document.querySelector('.filter-btn[data-filter="all"]');
+    allButton.classList.add('selected');
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  filterButtons.forEach(button => {
+    button.addEventListener('click', applyFilter);
+  });
+});
+
+function createFilterButtons(products) {
+  const uniqueCategories = new Set(products.map(product => product.category)); // 获取所有唯一的分类
+  const filterButtonsContainer = document.querySelector('.filter-buttons');
+  uniqueCategories.forEach(category => {
+    const button = document.createElement('button');
+    button.className = 'filter-btn';
+    button.textContent = category;
+    button.setAttribute('data-filter', category);
+    button.addEventListener('click', applyFilter); // 为按钮添加点击事件
+    filterButtonsContainer.appendChild(button);
+  });
+}
+
+function applyFilter(event) {
+  const filter = event.target.getAttribute('data-filter');
+  const products = document.querySelectorAll('.product');
+  const buttons = document.querySelectorAll('.filter-btn');
+
+    // 移除所有按钮的选中状态
+    buttons.forEach(btn => btn.classList.remove('selected'));
+
+    // 为当前点击的按钮添加选中状态
+    event.target.classList.add('selected');
+	
+  products.forEach(product => {
+    if (filter === 'all' || product.getAttribute('data-category') === filter) {
+      product.style.display = 'block';
+    } else {
+      product.style.display = 'none';
+    }
+  });
+}
+
+function renderProducts(products, baseImageURL) {
+  const productGrid = document.getElementById('productGrid');
+  productGrid.innerHTML = ''; // 清空现有商品列表
+  products.forEach(product => {
+    const imageName = product.image;
+    const productName = extractProductNameFromUrl(imageName); // 提取商品名称
+	const productCategory = product.category; // 从JSON数据中获取商品分类
+    const productImageUrl = baseImageURL + imageName; // 构建商品图片URL
+    const productEl = document.createElement('div');
+    productEl.className = 'product';
+	productEl.setAttribute('data-category', productCategory); // 设置商品分类属性
+    productEl.innerHTML = `
+      <img src="${productImageUrl}" alt="${productName}">
+      <div class="product-info">
+      <div class="product-name">${productName}</div>
+      <div class="size-buttons">
+          ${product.sizes.map(size => `<button class="size-btn" data-size="${size}">${size}</button>`).join('')}
+        </div>
+      </div>
+    `;
+    productGrid.appendChild(productEl);
+    // 为每个商品添加点击事件监听器
+    productEl.addEventListener('click', (e) => {
+      if (e.target.classList.contains('size-btn')) {
+        const size = e.target.getAttribute('data-size');
+        // 此处productImageUrl应该是从product对象中获取的，而不是重新拼接
+        const productImageUrl = baseImageURL + product.image;
+        addToCart(productName, size, productImageUrl);
+      }
+    });
+  });
+}
+
+function showMessage(message) {
+  const messageBox = document.getElementById('messageBox');
+  messageBox.textContent = message;
+  messageBox.classList.add('show'); // 显示消息提示框
+
+  // 3秒后隐藏消息框
+  setTimeout(() => {
+    messageBox.classList.remove('show'); // 移除显示类，开始渐出效果
+  }, 1000);
+}
+
+let hasItemsInCart = false; // 新增变量
+
+function addToCart(productName, size, productImageUrl) {
+  const cartItemsContainer = document.getElementById('cartItems');
+  const cartItem = document.createElement('div');
+  cartItem.className = 'cart-item';
+  cartItem.innerHTML = `
+    <img src="${productImageUrl}" alt="${productName}" class="cart-item-image">
+    <span class="item-info">${productName} - ${size}</span>
+    <button onclick="removeFromCart(this)">删除</button>
+  `;
+  cartItemsContainer.appendChild(cartItem);
+  hasItemsInCart = true;
+  toggleCartButtons(); // 切换按钮显示状态
+  showCart(); // 显示购物车浮窗
+  saveCartToLocalStorage(); // 保存购物车数据到LocalStorage
+  
+    // 自动复制商品信息
+  const itemInfo = `${productName} - ${size}`;
+  copyToClipboard(itemInfo);
+  showMessage(`${itemInfo}`);
+}
+
+function copyToClipboard(text) {
+  // 创建一个临时的 textarea 元素用于复制文本
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.style.position = 'fixed'; // 防止出现滚动条
+  document.body.appendChild(textarea);
+  textarea.focus();
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+  showMessage(`已复制 ${text}`);
+}
+
+function removeFromCart(button) {
+  const cartItem = button.parentNode;
+  cartItem.remove();
+  hasItemsInCart = document.getElementById('cartItems').children.length > 0;
+  toggleCartButtons();
+  if (!hasItemsInCart) {
+    hideCart(); // 如果购物车为空，隐藏购物车浮窗
+  }
+  saveCartToLocalStorage(); // 更新LocalStorage
+}
+
+function clearCart() {
+  const cartItems = document.getElementById('cartItems');
+  cartItems.innerHTML = '';
+  showMessage('已清空');
+  hasItemsInCart = false;
+  toggleCartButtons();
+  hideCart(); // 清空购物车后隐藏浮窗
+  saveCartToLocalStorage(); // 更新LocalStorage
+}
+
+// 新增toggleCartButtons函数
+function toggleCartButtons() {
+  const cartHeader = document.querySelector('.cart-header');
+  if (hasItemsInCart) {
+      cartHeader.style.display = 'block';
+  } else {
+      cartHeader.style.display = 'none';
+  }
+}
+
+// 新增的showCart函数
+function showCart() {
+  const cart = document.querySelector('.cart');
+  cart.style.display = 'flex'; // 显示购物车浮窗
+}
+
+// 新增的hideCart函数
+function hideCart() {
+  const cart = document.querySelector('.cart');
+  cart.style.display = 'none'; // 隐藏购物车浮窗
+}
+
+function copyCart() {
+  const cartContents = document.querySelectorAll('.cart-item .item-info');
+  let cartContent = '';
+  cartContents.forEach(itemInfo => {
+    cartContent += itemInfo.textContent + '\n';
+  });
+  cartContent = cartContent.trim();
+  if (cartContent) {
+    navigator.clipboard.writeText(cartContent).then(function() {
+      showMessage('已复制');
+	  clearCartFromLocalStorage();
+    }).catch(function(err) {
+      showMessage('复制失败');
+    });
+  } else {
+    showMessage('列表为空');
+  }
+}
+
+function clearSearch() {
+  const searchInput = document.getElementById('searchInput');
+  searchInput.value = ''; // 清空搜索框
+  searchInput.focus(); // 将焦点移回搜索框
+  showMessage('搜索框已清空，显示全部商品');
+  showAllProducts(); // 显示所有商品
+}
+
+function showAllProducts() {
+  const products = document.querySelectorAll('.product');
+  products.forEach(product => {
+    product.style.display = 'block';
+  });
+}
+
+function exportCartAsImage() {
+  const cartItemsContainer = document.getElementById('cartItems');
+  if (cartItemsContainer.children.length === 0) {
+    showMessage('购物车为空');
+    return;
+  }
+
+  // 创建一个临时div元素
+  const tempDiv = document.createElement('div');
+  tempDiv.style.position = 'absolute';
+  tempDiv.style.left = 0;
+  tempDiv.style.top = 0;
+  tempDiv.style.width = '360px'; // 与canvas宽度一致
+  document.body.appendChild(tempDiv);
+
+  // 复制购物车项到临时div，但不包含删除按钮
+  cartItemsContainer.querySelectorAll('.cart-item').forEach(cartItem => {
+    const clone = cartItem.cloneNode(true);
+    clone.querySelectorAll('button').forEach(btn => btn.remove()); // 移除所有按钮
+    tempDiv.appendChild(clone);
+  });
+
+  // 渲染canvas
+  html2canvas(tempDiv, { scrollY: -window.scrollY, scrollX: 0, width: 360 }).then(canvas => {
+    document.body.removeChild(tempDiv); // 移除临时div
+    const imgURL = canvas.toDataURL('image/png');
+    navigator.clipboard.writeText(imgURL).then(function() {
+      showMessage('已复制图片到剪贴板');
+      createNewWindowWithImage(imgURL); // 在新窗口中显示图片
+    }).catch(function(err) {
+      showMessage('复制失败');
+    });
+  });
+}
+
+
+function searchProducts() {
+  const searchText = document.getElementById('searchInput').value.toLowerCase();
+  const products = document.querySelectorAll('.product .product-name');
+
+  if (searchText === '') {
+    showAllProducts();
+    return;
+  }
+
+  // 根据输入的文本筛选商品
+  let matches = 0;
+  products.forEach(product => {
+    const textContent = product.textContent.toLowerCase();
+    if (textContent.includes(searchText)) {
+      product.parentNode.parentNode.style.display = 'block';
+      matches++;
+    } else {
+      product.parentNode.parentNode.style.display = 'none';
+    }
+  });
+
+  if (matches === 0) {
+    showMessage('没有找到商品');
+  } else {
+    showMessage(`${matches} 个商品匹配`);
+  }
+}
+</script>
+
+</body>
+</html>
